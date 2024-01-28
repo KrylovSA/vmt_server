@@ -1,0 +1,9 @@
+rm *.o
+gcc -c main.c
+gcc -c -I/usr/local/dscud5 commandhandlers.c
+gcc -c utils.c
+gcc -c serv.c
+gcc -c zpipe.c
+gcc -c dnotes_tcp.c
+#gcc main.o commandhandlers.o utils.o serv.o zpipe.o dnotes_tcp.o -I/usr/local/dscd5 -L/usr/local/dscud5 -ldscud5 /usr/lib/libz.so /usr/lib/libm.so -o ../vmt_server
+gcc main.o commandhandlers.o utils.o serv.o zpipe.o dnotes_tcp.o -I/usr/local/dscud5 -L/usr/local/dscud5 -ldscud5 -lz -lm -o ../vmt_server -pthread

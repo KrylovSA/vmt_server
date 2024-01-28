@@ -1,0 +1,45 @@
+# Project: vmt_server
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = mingw32-gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o commandhandlers.o utils.o serv.o zpipe.o dnotes_tcp.o $(RES)
+LINKOBJ  = main.o commandhandlers.o utils.o serv.o zpipe.o dnotes_tcp.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib/linux" -L"C:/Dev-Cpp/lib/linux"  
+INCS =  -I"C:/Dev-Cpp/include/linux"  -I"C:/lazarus/projectsessions/inetd/vmt_server/C"  -I"C:/Dev-Cpp/include/linux"  -I"C:/lazarus/projectsessions/inetd/vmt_server" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/lazarus/projectsessions/inetd/vmt_server/C"  -I"C:/Dev-Cpp/include/linux"  -I"C:/lazarus/projectsessions/inetd/vmt_server" 
+BIN  = vmt_server.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before vmt_server.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "vmt_server.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+commandhandlers.o: commandhandlers.c
+	$(CC) -c commandhandlers.c -o commandhandlers.o $(CFLAGS)
+
+utils.o: utils.c
+	$(CC) -c utils.c -o utils.o $(CFLAGS)
+
+serv.o: serv.c
+	$(CC) -c serv.c -o serv.o $(CFLAGS)
+
+zpipe.o: zpipe.c
+	$(CC) -c zpipe.c -o zpipe.o $(CFLAGS)
+
+dnotes_tcp.o: dnotes_tcp.c
+	$(CC) -c dnotes_tcp.c -o dnotes_tcp.o $(CFLAGS)

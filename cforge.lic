@@ -1,0 +1,16 @@
+ID: 0xc962cfe6
+LMVersion: 3.1
+ProductTitle: Code Forge IDE
+Type: Evaluation
+SystemID: n/a
+Units: 5
+VendorInfo: Code Forge, Inc.
+ClientInfo: Serg Kryloff
+LicenseInfo: Evaluation
+Platforms: AllowAll
+ExpDate: 2008.10.26
+AllowedToolsList: AllowAll
+LanguageList: AllowAll
+RevisionControls: AllowAll
+ExternalTools: AllowAll
+Checksum: 2818-FC60-47BA-DFFB
